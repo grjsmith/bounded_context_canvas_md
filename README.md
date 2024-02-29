@@ -15,20 +15,20 @@
 <div align="center">
   <a href="https://github.com/grjsmith/bounded_context_canvas_md
 ">
-    <img src="images/grants_dotfiles.png" alt="screenshot of desktop with terminal config" width="800">
+    <img src="images/bounded_context_canvas_md.png" alt="Bounded context canvas funky synthwave logo" width="800">
   </a>
 
-<h1 align="center">Grant's dotfiles</h1>
+<h1 align="center">Bounded Context Canvas Markdown</h1>
 
   <p align="center">
-    An implementation of the ddd-crew's [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas) in markdown
+    A simplified implementation of the ddd-crew's [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas) in markdown
     <br />
-    <a href="https://github.com/grjsmith/dotfiles"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/grjsmith/bounded_context_canvas_md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/grjsmith/dotfiles/issues">Report Bug</a>
+    <a href="https://github.com/grjsmith/bounded_context_canvas_md/issues">Report Bug</a>
     ·
-    <a href="https://github.com/grjsmith/dotfiles/issues">Request Feature</a>
+    <a href="https://github.com/grjsmith/bounded_context_canvas_md/issues">Request Feature</a>
   </p>
 </div>
 
@@ -62,15 +62,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-These are my dotfiles. I'm saving them here so I don't have to customise them again when I rebuild my laptop and so I can synchronise them across multiple machines.
+[Tomek Paczkowski](https://www.linkedin.com/in/tomekpaczkowski/) and I were trying to create some well defined bounded contexts out of a set of existing systems. This had been tried before with workshops and asking questions with little success. Tomek and I came up with the idea of using [Notion](https://notion.so/) and the bounded context canvas on a call with the engineers who ran the service to try and extract the details. We created a the DDD group's bounded contect canvas in Notion and began using Markdown to enter the details. We used Cunningham's Law* to get the engineers to actively contribute and eventually take over the exercise and do populate the information for themselves. This not only worked beautifully but it took us less than an hour to get a good first draft of each bounded context.
+
+\* "The best way to get the right answer on the Internet is not to ask a question; it's to post the wrong answer." - [Howard G Cunningham](https://en.wikipedia.org/wiki/Ward_Cunningham#:~:text=%22Cunningham's%20Law%22,-For%20the%20mathematical&text=Cunningham%20is%20credited%20with%20the,than%20to%20answer%20a%20question.)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
-* [LSCOLORS](https://github.com/sharkdp/lscolors)
-* [LSD](https://github.com/lsd-rs/lsd)
-* [Nerd Fonts, Cousine](https://github.com/ryanoasis/nerd-fonts)
-* [Neofetch](https://github.com/dylanaraps/neofetch)
+* The ddd-crew's [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas).
+* We used [Notion](https://notion.so/) because that was the document management tool of choice in Pollen. This could be done in VSCode or any text editor with Markdown support. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -78,21 +78,86 @@ These are my dotfiles. I'm saving them here so I don't have to customise them ag
 ## Getting Started
 ### Prerequisites
 
-* [On Windows install WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-* Download Debian from the Microsoft Store
-
-### Installation
-* Download the files and folders from the Github repo to ~/HOME
-* Profit?
+The only prerequisites required are the courage to look stupid in front of engineers and a willingness to frustrate them a little before they get the hang of it and take over.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-<!--## Usage
+## Usage
+# 101 Ways Bounded Context Canvas Template
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Created: Grant Smith
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Created at: February 4, 2022
+
+# <Name> bounded context canvas
+
+# Description
+
+>What benefits does this context provide and how does it provide them
+
+# Ubiquitous language
+
+>Context specific domain terminology
+
+- *Domain term: Definition*
+- *Domain term: Definition*
+- *Domain term: Definition*
+
+# Inbound data
+### Data provided by another context
+```yaml
+# employee data
+   employee_id: 1234
+    name: John Smith
+     contact: 
+       home: 02012345678
+       office: 02087654321
+     role: Software Engineer
+     office_address: 
+       street: "145 City Rd"
+       town: London
+       post_code: EC1V 1AZ
+     employed: True
+```
+### Data provided by another context
+
+```yaml
+# skills data
+   employee_id: 1234
+   skills:
+     - Javascript
+     - Azure
+     - Github Actions
+```
+## Events consumed
+- EmploymentStatusUpdated
+- EmployeeSkillsUpdated
+
+# Business rules
+
+1. If skills include 'Azure' raise event AzureDevOps
+2. ...
+
+# Outbound Data
+```yaml
+# Talent Availability Object
+employee_id: 1234
+   skills:
+     - Javascript
+     - Azure
+     - Github Actions
+   Region: SE
+   available_for_work: True
+   work_type: [ "Front-end Engineering", "DevOps" ]
+```
+## Events published
+- FrontendEngineerAvailable
+- DevOpsEngineerAvailable 
+
+# Assumptions
+
+Talent team are specifically interested in Azure DevOps capability
 
 <p align="right">(<a href="#top">back to top</a>)</p>-->
 
@@ -102,11 +167,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 Still working on Gotop config
 Tempted to figure out the Terminal weather app.
 
-See the [open issues](https://github.com/grjsmith/dotfiles/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/grjsmith/bounded_context_canvas_md/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -134,18 +197,15 @@ Don't forget to give the project a star! Thanks again!
 
 Grant Smith - [@grjsmith](https://twitter.com/grjsmith) - grant@nextgendevops.com
 
-Project Link: [https://github.com/grjsmith/dotfiles](https://github.com/grjsmith/dotfiles)
+Project Link: [https://github.com/grjsmith/bounded_context_canvas_md/](https://github.com/grjsmith/bounded_context_canvas_md/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-* Thanks to the Rainmeter team for the awesome tutorials
-* Thanks to Nick/Stangowner for the Afterburner/Rainmeter instructions and example code.
+* Thanks to the [ddd-crew](https://github.com/ddd-crew/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
