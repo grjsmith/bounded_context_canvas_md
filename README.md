@@ -51,7 +51,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <!--<li><a href="#roadmap">Roadmap</a></li>-->
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -83,92 +83,71 @@ The only prerequisites required are the courage to look stupid in front of engin
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-# 101 Ways Bounded Context Canvas Template
+# Bounded Context Canvas Markdown Template
 
-Created: Grant Smith
+Created: Grant Smith Created at: February 4, 2022
 
-Created at: February 4, 2022
-
-# <Name> bounded context canvas
+# Name
+>*Insert name of service here*
 
 # Description
-
->What benefits does this context provide and how does it provide them
+>*Describe the the service or context provides and how it provides them*
 
 # Ubiquitous language
-
->Context specific domain terminology
-
-- *Domain term: Definition*
-- *Domain term: Definition*
-- *Domain term: Definition*
+>*Record any context specific domain terminology*
+>- *Domain term: Definition*
+>- *Domain term: Definition*
+>- *Domain term: Definition...*
 
 # Inbound data
-### Data provided by another context
+## Data provided by other contexts
+>*Describe the data the service is dependent on in order to provide the benefits*
 ```yaml
-# employee data
-   employee_id: 1234
-    name: John Smith
-     contact: 
-       home: 02012345678
-       office: 02087654321
-     role: Software Engineer
-     office_address: 
-       street: "145 City Rd"
-       town: London
-       post_code: EC1V 1AZ
-     employed: True
+# Data inbound from context1
+   key1: value1
+     key2: 
+       key2a: value2a
+       key2b: value2b
+     key3: value3
+     key4: 
+       key4a: value4a
+       key4b: value4b
+       key4c: value4c
+     key5: value5
 ```
-### Data provided by another context
-
 ```yaml
-# skills data
-   employee_id: 1234
-   skills:
-     - Javascript
-     - Azure
-     - Github Actions
+# Data inbound from context2
+   key1: value1
+   List1: ['value2', 'value3', 'value4']
 ```
 ## Events consumed
-- EmploymentStatusUpdated
-- EmployeeSkillsUpdated
+>*List topics the service listens to and the specific events being consumed*
+>- *topic_name1*
+>    - *topic_name1_event1*
 
 # Business rules
-
-1. If skills include 'Azure' raise event AzureDevOps
-2. ...
+> *Describe the logic the service contains. Describe actions it performs when the service receives a `query`, `command` or `event`.*
+1. GIVEN `topic_name1_event1` occurs WHEN `key1 = value1` THEN do `action1`
 
 # Outbound Data
 ```yaml
-# Talent Availability Object
-employee_id: 1234
-   skills:
-     - Javascript
-     - Azure
-     - Github Actions
-   Region: SE
-   available_for_work: True
-   work_type: [ "Front-end Engineering", "DevOps" ]
+# Data outbound to context4
+    key6: value6
 ```
 ## Events published
-- FrontendEngineerAvailable
-- DevOpsEngineerAvailable 
+>*List topics the service listens to and the specific events being consumed*
+>- *topic_name2*
+>    - *topic_name2_event1*
 
 # Assumptions
-
-Talent team are specifically interested in Azure DevOps capability
-
-<p align="right">(<a href="#top">back to top</a>)</p>-->
-
-<!-- ROADMAP -->
-## Roadmap
-
-Still working on Gotop config
-Tempted to figure out the Terminal weather app.
-
-See the [open issues](https://github.com/grjsmith/bounded_context_canvas_md/issues) for a full list of proposed features (and known issues).
+> *List the assumptions made by the service or bounded context itself or made by the team building the service*
+>- *topic_name1_event1 only occurs when some real world event occurs*
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+<!--See the [open issues](https://github.com/grjsmith/bounded_context_canvas_md/issues) for a full list of proposed features (and known issues).
+<p align="right">(<a href="#top">back to top</a>)</p>-->
 
 <!-- CONTRIBUTING -->
 ## Contributing
