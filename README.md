@@ -21,14 +21,13 @@
 <h1 align="center">Bounded Context Canvas Markdown</h1>
 
   <p align="center">
-    A simplified implementation of the ddd-crew's [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas) in markdown
-    <br />
-    <a href="https://github.com/grjsmith/bounded_context_canvas_md"><strong>Explore the docs »</strong></a>
+    A simplified implementation of the ddd-crew's <a href="https://github.com/ddd-crew/bounded-context-canvas">Bounded Context Canvas</a> using markdown and YAML.
     <br />
     <br />
-    <a href="https://github.com/grjsmith/bounded_context_canvas_md/issues">Report Bug</a>
+    <br />
+    <a href="https://github.com/grjsmith/bounded_context_canvas_md/issues">Report a bug</a>
     ·
-    <a href="https://github.com/grjsmith/bounded_context_canvas_md/issues">Request Feature</a>
+    <a href="https://github.com/grjsmith/bounded_context_canvas_md/issues">Request a feature</a>
   </p>
 </div>
 
@@ -67,7 +66,6 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
-
 * The ddd-crew's [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas).
 * We used [Notion](https://notion.so/) because that was the document management tool of choice in Pollen. This could be done in VSCode or any text editor with Markdown support. 
 
@@ -143,6 +141,7 @@ Created: Grant Smith Created at: February 4, 2022
 > *List the assumptions made by the service or bounded context itself or made by the team building the service*
 >- *topic_name1_event1 only occurs when some real world event occurs*
 
+<br />
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
@@ -181,7 +180,8 @@ Project Link: [https://github.com/grjsmith/bounded_context_canvas_md/](https://g
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-* Thanks to the [ddd-crew](https://github.com/ddd-crew/)
+* Thanks to the [ddd-crew](https://github.com/ddd-crew/) for their work on the original canvas and on Domain Driven Design.
+* Thanks to Eric Evans for his book <a href="https://read.amazon.co.uk/kp/embed?asin=B00794TAUG&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_16BE6BZMQ2YDKGR3NMG1">Domain Driven Design.</a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
