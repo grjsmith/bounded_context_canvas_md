@@ -80,26 +80,36 @@ The only prerequisites required are the courage to look stupid in front of engin
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-## Usage
 # Bounded Context Canvas Markdown Template
 
 Created: Grant Smith Created at: February 4, 2022
 
-# Name
->*Insert name of service here*
+## Name
 
-# Description
->*Describe the the service or context provides and how it provides them*
+>*[Insert name of service here]*
 
-# Ubiquitous language
->*Record any context specific domain terminology*
->- *Domain term: Definition*
->- *Domain term: Definition*
->- *Domain term: Definition...*
+## Description
 
-# Inbound data
-## Data provided by other contexts
->*Describe the data the service is dependent on in order to provide the benefits*
+>*[Describe the value service or context provides and how it provides them]*
+
+Note: This is a great opportunity to identify overlaps between services or special cases where a service has been created to handle an edge case that another service didn't cope with. Any findings like these should be added to the assumptions because this service assumes that another service isn't handling those cases.
+
+## Ubiquitous language
+
+>*[Record any context specific domain terminology]*
+>
+>* *Domain term: Definition_1*
+>* *Domain term: Definition_2*
+>* *Domain term: Definition_n*
+
+Note: Ubiquitous language doesn't just mean business terms. This is the place where it should be noted that ```variable_name``` doesn't mean the same thing as ```Variable_name``` or ```Variable_Name```.
+
+## Inbound data
+
+### Data provided by other contexts
+
+>*[Describe the data the service is dependent on in order to provide the benefits]*
+
 ```yaml
 # Data inbound from context1
    key1: value1
@@ -113,33 +123,57 @@ Created: Grant Smith Created at: February 4, 2022
        key4c: value4c
      key5: value5
 ```
+
 ```yaml
 # Data inbound from context2
    key1: value1
    List1: ['value2', 'value3', 'value4']
 ```
-## Events consumed
+
+Note: This is where the template really starts adding value. This set of inbound dependencies can be shared with the teams that own the services listed and they will then learn how their outputs are consumed by other teams. This can allow a relationship to be created where there wasn't one before and this can allow for forward planning. This also allows teams to run with the template and populate it on their own without support.
+
+### Events consumed
+
 >*List topics the service listens to and the specific events being consumed*
->- *topic_name1*
->    - *topic_name1_event1*
+>
+>* *topic_name_1*
+>   * *topic_name_1_event_1*
+>   * *topic_name_1_event_2*
+>   * *topic_name_n_event_n*
 
-# Business rules
+Note: Events aren't listed because they are particularly different from any other form of data it's more to trigger teams to think of any data state change their service might be listening for but wouldn't normally think about when thinking about inbound data.
+
+## Business rules
+
 > *Describe the logic the service contains. Describe actions it performs when the service receives a `query`, `command` or `event`.*
-1. GIVEN `topic_name1_event1` occurs WHEN `key1 = value1` THEN do `action1`
+>
+>1. GIVEN `topic_name1_event1` occurs WHEN `key1 = value1` THEN do `action1`
 
-# Outbound Data
+Note: This is where the team can share that when their application performs some function some team somewhere is impacted i.e. When some data is updated the services calculates something and a team somewhere else takes note of that and takes some action. Behaviour Driven Development language isn't necessary but it is concise.
+
+## Outbound Data
+
 ```yaml
 # Data outbound to context4
     key6: value6
 ```
-## Events published
->*List topics the service listens to and the specific events being consumed*
->- *topic_name2*
->    - *topic_name2_event1*
 
-# Assumptions
+## Events published
+
+>*List topics the service listens to and the specific events being consumed*
+>
+>- *topic_name_2*
+>   - *topic_name_2_event_1*
+>   - *topic_name_2_event_2*
+>   - *topic_name_n_event_n*
+
+## Assumptions
+
 > *List the assumptions made by the service or bounded context itself or made by the team building the service*
->- *topic_name1_event1 only occurs when some real world event occurs*
+>
+>* *topic_name1_event1 only occurs when some real world event occurs*
+
+Note: The first time the template is used with the first team these assumptions aren't very helpful. When a few teams have described a few of their services, the assumptions begin to show gaps where people thought something was happening in another team or another service and it isn't or is about to change.
 
 <br />
 <p align="right">(<a href="#top">back to top</a>)</p>
