@@ -1,6 +1,7 @@
 # Bounded Context Canvas Markdown Template
 
-Created: Grant Smith Created at: February 4, 2022
+
+> Created by: *[Insert name here*] Date: *[Insert data here]*
 
 ## Name
 
